@@ -28,4 +28,6 @@ COPY . .
 
 # Command to run the application
 # Note: We'll use gunicorn with app.py (Flask wrapper)
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "app:app"]
+# Make the script executable and run it
+RUN chmod +x start.sh
+CMD ["./start.sh"]
